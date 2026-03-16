@@ -1,0 +1,88 @@
+.dock-outer {
+  margin: 0 0.5rem;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+}
+
+.dock-panel {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  width: fit-content;
+  gap: 1rem;
+
+  border-radius: 16px;
+
+  /* galaxy glass panel */
+  background: rgba(8, 2, 20, 0.65);
+  backdrop-filter: blur(14px);
+
+  /* subtle neon border */
+  border: 1px solid rgba(0, 255, 255, 0.25);
+
+  padding: 0.4rem 0.6rem 0.6rem;
+}
+
+.dock-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  /* dark space panel */
+  background: rgba(12, 5, 30, 0.8);
+
+  border: 1px solid rgba(0, 255, 255, 0.18);
+
+  cursor: pointer;
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+/* hover glow */
+.dock-item:hover {
+  border-color: rgba(0, 255, 255, 0.6);
+  background: rgba(20, 10, 50, 0.9);
+}
+
+.dock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #7dd3fc; /* soft neon cyan */
+  transition: all 0.25s ease;
+}
+
+.dock-item:hover .dock-icon {
+  color: #ffffff;
+}
+
+.dock-label {
+  position: absolute;
+  top: -1.7rem;
+  left: 50%;
+
+  width: fit-content;
+  white-space: pre;
+
+  border-radius: 6px;
+
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  background: rgba(6, 0, 16, 0.9);
+
+  padding: 0.15rem 0.5rem;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  color: #a5f3fc;
+
+  transform: translateX(-50%);
+}
