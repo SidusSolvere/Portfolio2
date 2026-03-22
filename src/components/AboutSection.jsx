@@ -1,10 +1,9 @@
 export default function AboutSection() {
   return (
-    <section className="w-full min-h-screen text-white px-10 md:px-24 py-32 relative z-10">
+    <section className="w-full min-h-screen text-white px-6 md:px-24 py-32 relative z-10">
 
       <div className="max-w-6xl">
-        <h2 className="text-2xl md:text-5xl font-light leading-tight bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400
-bg-clip-text text-transparent">
+        <h2 className="text-2xl md:text-5xl font-light leading-tight bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
           I believe in building software that blends&nbsp;
           <span className="text-cyan-400">engineering</span>,
           <span className="text-indigo-400">creativity</span>, and&nbsp;
@@ -20,15 +19,16 @@ bg-clip-text text-transparent">
         This is me.
       </div>
 
-      <div className="grid md:grid-cols-2 gap-16 mt-10 max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mt-10 max-w-6xl">
 
         <div>
-          <h3 className="text-5xl md:text-6xl font-light">
-            Hi, I'm <span className="text-white font-medium">Sid Lahiri</span>.
+          <h3 className="text-4xl md:text-6xl font-light">
+            Hi, I'm
           </h3>
+           <span className="text-white font-medium text-4xl md:text-6xl ">Siddhivinayak Lahiri</span>.
         </div>
 
-        <div className="space-y-6 text-white/70 leading-relaxed text-lg">
+        <div className="space-y-6 text-white/70 leading-relaxed text-base md:text-lg">
 
           <p>
             I'm a Computer Science student and developer focused on building

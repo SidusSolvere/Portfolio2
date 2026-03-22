@@ -271,7 +271,6 @@ function update(t) {
   if (!disableAnimation) {
     program.uniforms.uTime.value = t * 0.001;
 
-    // Slowdown effect (hardcoded)
     currentSpeed = Math.max(0.6, currentSpeed * 0.98);
     currentStarSpeed = Math.max(0.5, currentStarSpeed * 0.98);
     currentAutoCenterRepulsion = Math.max(0, currentAutoCenterRepulsion * 0.98);

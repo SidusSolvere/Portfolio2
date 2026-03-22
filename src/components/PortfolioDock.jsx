@@ -6,6 +6,9 @@ import {
   VscLinkExternal,
   VscMail,
 } from "react-icons/vsc";
+import { LuCircuitBoard } from "react-icons/lu";
+import { LiaCertificateSolid } from "react-icons/lia";
+
 
 function PortfolioDock() {
   const scrollTo = (id) => {
@@ -27,9 +30,19 @@ function PortfolioDock() {
       onClick: () => scrollTo("about"),
     },
     {
+      icon: <LuCircuitBoard size={20} className="text-white"/>,
+      label: "Tech Stack",
+      onClick: () => scrollTo("tech"),
+    },
+    {
       icon: <VscCode size={20} className="text-white"/>,
       label: "Projects",
       onClick: () => scrollTo("projects"),
+    },
+    {
+      icon: <LiaCertificateSolid size={20} className="text-white"/>,
+      label: "Certificates",
+      onClick: () => scrollTo("certificates"),
     },
     {
       icon: <VscLinkExternal size={20} className="text-white"/>,
