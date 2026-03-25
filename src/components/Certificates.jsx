@@ -59,7 +59,7 @@ export default function PdfCarousel() {
     return () => clearInterval(interval);
   }, [api]);
 return (
-  <div className="pt-32 pb-20">
+  <div className="">
     <h2
       className="
         text-center
@@ -84,13 +84,13 @@ return (
           {items.map((item, index) => (
             <CarouselItem
               key={index}
-              className="basis-1/2 sm:basis-1/3 lg:basis-1/4"
+              className="basis-1/2 sm:basis-1/3 lg:basis-1/3"
             >
-              <div className="p-4">
+              <div className="p-4 h-[320px]">
                 <a href={item.image} target="_blank">
                   <img
                     src={item.image}
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </a>
               </div>

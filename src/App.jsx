@@ -9,6 +9,7 @@ import HoverProjects from "./components/HoverProjects";
 import GallerySection from "./components/GallerySection";
 import ContactSocials from "./components/ContactSocials";
 import PdfCarousel from "./components/Certificates";
+import EducationGlass from "./components/Education";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -75,6 +76,7 @@ function App() {
           
           <section id="certificates" >
             <PdfCarousel />
+            <EducationGlass/>
           </section>
 
           <section id="socials">

@@ -64,6 +64,7 @@ export default function ContactConstellation() {
 
   const [hovered, setHovered] = useState(null);
   const email = "sidlahiri04@gmail.com";
+  const [copied, setCopied] = useState(false);
 
   return (
     <section className="min-h-screen flex items-center justify-center px-10 text-white">
@@ -96,24 +97,50 @@ export default function ContactConstellation() {
             Reach out for collaborations, projects, or just to say hi.
           </p>
 
-          <a
-  href={`mailto:${email}?subject=Portfolio%20Contact&body=Hi%20Sid,`}
-            className="
-            flex items-center gap-3
-            px-6 py-4
-            rounded-xl
-            border border-cyan-400/40
-            bg-white/5
-            backdrop-blur-md
-            hover:border-cyan-300
-            hover:shadow-[0_0_20px_rgba(0,255,255,0.7)]
-            transition
-            w-fit
-            "
-          >
-            <FaEnvelope size={20}/>
-            {email}
-          </a>
+         <div
+  onClick={() => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+
+    setTimeout(() => setCopied(false), 2000);
+  }}
+  className="
+  cursor-pointer
+  flex items-center gap-3
+  px-6 py-4
+  rounded-xl
+  border border-cyan-400/40
+  bg-white/5
+  backdrop-blur-md
+  hover:border-cyan-300
+  hover:shadow-[0_0_20px_rgba(0,255,255,0.7)]
+  transition
+  w-fit
+  relative
+  "
+>
+  <FaEnvelope size={20}/>
+ {email}
+</div>
+ 
+
+ {copied && (
+  <motion.span
+    initial={{ opacity: 0, y: 5 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.2 }}
+    className="
+      absolute
+      -top-8
+      
+      -translate-x-1/2
+      text-sm
+      text-cyan-300
+    "
+  >
+    Copied mail
+  </motion.span>
+)}
 <a
   href="../assets/SID1223.pdf"
   download
