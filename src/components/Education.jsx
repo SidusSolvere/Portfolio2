@@ -31,13 +31,13 @@ export default function EducationGlass() {
           title: "Senior Secondary (12th)",
           school: "Aklank Public School",
           time: "2020 - 2022",
-          extra: "Percentage: 85%"
+          extra: "Percentage: 67%"
         },
         {
           title: "Secondary (10th)",
           school: "DPS",
           time: "2019 - 2020",
-          extra: "Percentage: 85%"
+          extra: "Percentage: 89%"
         }].map((item, i) => (
           
           <div
