@@ -21,8 +21,10 @@ import {
   SiCplusplus,
   SiQt,
 } from "react-icons/si";
+import { RiTeamFill } from "react-icons/ri";
+import { BsPersonSquare } from "react-icons/bs";
 
-import { FaJava, FaRobot } from "react-icons/fa";
+import { FaJava, FaRobot ,FaBrain} from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
 
 const stack = [
@@ -84,6 +86,14 @@ const stack = [
       { name: "Unity", icon: SiUnity, color: "text-gray-200" },
     ],
   },
+  {
+    title: "Soft Skills",
+    tech: [
+      { name: "Teamwork", icon: RiTeamFill, color: "text-green-500" },
+      { name: "Leadership", icon: BsPersonSquare, color: "text-blue-500" },
+      { name: "Fast Learner", icon: FaBrain, color: "text-red-400" },
+    ],
+  },
 ];
 
 export default function TechStack() {
@@ -106,10 +116,9 @@ export default function TechStack() {
   }, []);
 
   return (
-   <section className="min-h-screen px-10 py-32 text-white flex flex-col items-center">
-
-  <h2
-    className="
+    <section className="min-h-screen px-10 py-32 text-white flex flex-col items-center">
+      <h2
+        className="
     text-center
     text-5xl font-bold tracking-wide
     text-transparent
@@ -118,15 +127,14 @@ export default function TechStack() {
     drop-shadow-[0_0_20px_rgba(0,255,255,0.5)]
     mb-10
     "
-  >
-    Tech Stack
-  </h2>
+      >
+        Tech Stack
+      </h2>
 
-  <div
-    ref={gridRef}
-    className="grid md:grid-cols-3 gap-10 max-w-7xl transition-transform duration-300"
-  >
-
+      <div
+        ref={gridRef}
+        className="grid md:grid-cols-3 gap-10 max-w-7xl transition-transform duration-300"
+      >
         {stack.map((group, i) => (
           <div
             key={group.title}
@@ -145,13 +153,9 @@ export default function TechStack() {
             transition-all
             "
           >
-
-            <h3 className="text-xl font-semibold mb-6">
-              {group.title}
-            </h3>
+            <h3 className="text-xl font-semibold mb-6">{group.title}</h3>
 
             <div className="grid grid-cols-3 gap-6">
-
               {group.tech.map((tech) => {
                 const Icon = tech.icon;
 
@@ -160,7 +164,6 @@ export default function TechStack() {
                     key={tech.name}
                     className="flex flex-col items-center gap-2 group"
                   >
-
                     <Icon
                       className={`
                       text-4xl
@@ -172,29 +175,22 @@ export default function TechStack() {
                       `}
                     />
 
-                    <span className="text-xs opacity-80">
-                      {tech.name}
-                    </span>
-
+                    <span className="text-xs opacity-80">{tech.name}</span>
                   </div>
                 );
               })}
-
             </div>
-
           </div>
         ))}
-
       </div>
 
-      <style >{`
+      <style>{`
         @keyframes float {
           0% { transform: translateY(0px); }
           50% { transform: translateY(-12px); }
           100% { transform: translateY(0px); }
         }
       `}</style>
-
     </section>
   );
 }

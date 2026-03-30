@@ -11,7 +11,6 @@ import render2 from "../assets/certi/2.png";
 import render3 from "../assets/certi/3.png";
 import render4 from "../assets/certi/4.png";
 import render5 from "../assets/certi/5.png";
-import render6 from "../assets/certi/6.png";
 import render7 from "../assets/certi/7.png";
 import render8 from "../assets/certi/8.png";
 import render9 from "../assets/certi/9.png";
@@ -24,6 +23,7 @@ import render15 from "../assets/certi/15.png";
 import render16 from "../assets/certi/16.png";
 import render17 from "../assets/certi/17.png";
 import render18 from "../assets/certi/18.png";
+import render19 from "../assets/certi/19.png";
 
 const items = [
   { image: render1, text: "Full scene render" },
@@ -31,7 +31,6 @@ const items = [
   { image: render3, text: "Custom scene" },
   { image: render4, text: "Donut" },
   { image: render5, text: "Grenade" },
-  { image: render6, text: "Grenade" },
   { image: render7, text: "Grenade" },
   { image: render8, text: "Grenade" },
   { image: render9, text: "Grenade" },
@@ -44,6 +43,7 @@ const items = [
   { image: render16, text: "Grenade" },
   { image: render17, text: "Grenade" },
   { image: render18, text: "Grenade" },
+  { image: render19, text: "Grenade" },
 ];
 
 export default function PdfCarousel() {
